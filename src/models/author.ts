@@ -18,4 +18,4 @@ export default Author;
  * Not case sensitive.
  */
 export const findAuthorByString = (name: string) =>
-  authors.find((a) => a.name.toLowerCase() === name.toLowerCase());
+  authors.find((a) => a.name.toLowerCase().includes(name.toLowerCase()));
