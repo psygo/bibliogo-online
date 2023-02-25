@@ -13,6 +13,18 @@ const authors: Author[] = [
     countries: [Country.japan],
     spokenLanguages: [Language.japanese],
   },
+  {
+    name: "Yilun Yang 楊以倫",
+    birth: new Date("1951-01-01"),
+    rank: "7p",
+    countries: [Country.china],
+    spokenLanguages: [Language.chinese, Language.english],
+  },
+  {
+    name: "William Cobb",
+    countries: [Country.usa],
+    spokenLanguages: [Language.english],
+  },
 ];
 
 export default authors;

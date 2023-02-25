@@ -16,6 +16,8 @@ interface _Book {
   topics: readonly Topic[];
   levelRange?: LevelRange;
   externalLinks?: readonly URL[];
+  pages: number | 'unknown';
+  numberOfProblems?: number;
 }
 type Book = Readonly<_Book>;
 export default Book;

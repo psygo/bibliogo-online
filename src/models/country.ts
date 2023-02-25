@@ -3,6 +3,7 @@ enum Country {
   japan = "JPN",
   china = "CHN",
   korea = "KOR",
+  taiwan = "TWN",
 }
 
 export default Country;

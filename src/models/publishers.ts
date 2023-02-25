@@ -1,4 +1,5 @@
 enum Publisher {
+  self_published = "Self Published",
   kiseido = "Kiseido",
   gobooks = "Go Books",
   ishi = "Ishi Press",

@@ -6,8 +6,8 @@ import authors from "@/data/authors";
 interface _Author {
   name: string;
   pic?: URL;
-  rank: string;
-  birth: Date | undefined;
+  rank?: string;
+  birth?: Date | undefined;
   countries: readonly Country[];
   spokenLanguages: readonly Language[];
 }
