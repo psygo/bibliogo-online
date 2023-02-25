@@ -15,49 +15,59 @@ const columns: GridColDef[] = [
     field: "title",
     headerName: "Title",
     width: 530,
-    renderCell: (params) => {
-      return (
-        <>
-          <Image
-            src={params.row.pic.toString()}
-            alt="Book's Thumbnail"
-            width={50}
-            height={50}
-          />
-          <Typography sx={{ ml: theme.spacing(2) }} variant="subtitle1">
-            {params.value}
-          </Typography>
-          <Typography
-            sx={{ ml: theme.spacing(2), color: "grey" }}
-            variant="subtitle2"
-          >
-            {params.row.subtitle}
-          </Typography>
-        </>
-      );
-    },
+    renderCell: (params) => (
+      <>
+        <Image
+          src={params.row.pic.toString()}
+          alt="Book's Thumbnail"
+          width={50}
+          height={50}
+        />
+        <Typography sx={{ ml: theme.spacing(2) }} variant="subtitle1">
+          {params.value}
+        </Typography>
+        <Typography
+          sx={{ ml: theme.spacing(2), color: "grey" }}
+          variant="subtitle2"
+        >
+          {params.row.subtitle}
+        </Typography>
+      </>
+    ),
   },
   {
     field: "author",
     headerName: "Author",
     width: 330,
-    renderCell: (params) => {
-      return (
-        <>
-          {params.value.pic && (
-            <Image
-              src={params.value.pic?.toString()}
-              alt="Author's Picture"
-              width={50}
-              height={50}
-            />
-          )}
-          <Typography sx={{ ml: theme.spacing(2) }} variant="subtitle1">
-            {params.value.name}
-          </Typography>
-        </>
-      );
-    },
+    renderCell: (params) => (
+      <>
+        {params.value.pic && (
+          <Image
+            src={params.value.pic?.toString()}
+            alt="Author's Picture"
+            width={50}
+            height={50}
+          />
+        )}
+        <Typography sx={{ ml: theme.spacing(2) }} variant="subtitle1">
+          {params.value.name}
+        </Typography>
+      </>
+    ),
+  },
+  {
+    field: "pages",
+    headerName: "# Pages",
+    width: 70,
+    align: "center",
+  },
+  {
+    field: "publishers",
+    headerName: "Publishers",
+    width: 200,
+    renderCell: (params) => (
+      <Typography variant="subtitle2">{params.value.join(", ")}</Typography>
+    ),
   },
 ];
 
