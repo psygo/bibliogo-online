@@ -1,16 +1,18 @@
+import { useState, ChangeEvent } from "react";
+
 import Head from "next/head";
 import Image from "next/image";
 
 import { DataGrid, GridColDef } from "@mui/x-data-grid";
-import { createTheme, Typography } from "@mui/material";
+import { createTheme, FormControl, TextField, Typography } from "@mui/material";
 
-import books from "@/data/books";
+import allBooks from "@/data/books";
 
 const theme = createTheme({
   spacing: 4,
 });
 
-const columns: GridColDef[] = [
+const booksTableColumns: GridColDef[] = [
   {
     field: "title",
     headerName: "Title",
@@ -72,6 +74,28 @@ const columns: GridColDef[] = [
 ];
 
 export default function Home() {
+  const [books, setBooks] = useState(allBooks);
+
+  const [search, setSearch] = useState("");
+
+  function handleSearch(e: ChangeEvent<HTMLInputElement>) {
+    const newSearch = e.target.value;
+
+    setSearch(newSearch);
+
+    if (newSearch === "") {
+      setBooks(allBooks);
+    } else {
+      const filteredBooks = allBooks.filter(
+        (b) =>
+          b.title.toLowerCase().includes(search.toLowerCase()) ||
+          b.author.name.toLowerCase().includes(search.toLowerCase())
+      );
+
+      setBooks(filteredBooks);
+    }
+  }
+
   return (
     <>
       <Head>
@@ -82,10 +106,20 @@ export default function Home() {
       </Head>
 
       <main style={{ height: "100vh" }}>
+        <Typography variant="h4">Bibliogo Online</Typography>
+
+        <FormControl>
+          <TextField
+            label="Search"
+            value={search}
+            onChange={handleSearch}
+          ></TextField>
+        </FormControl>
+
         <DataGrid
           getRowId={(row) => row.title + row.pic}
           rows={books}
-          columns={columns}
+          columns={booksTableColumns}
           rowHeight={50}
         ></DataGrid>
       </main>

@@ -2,7 +2,7 @@ import Author from "@/models/author";
 import Country from "@/models/country";
 import Language from "@/models/language";
 
-const authors: Author[] = [
+const allAuthors: Author[] = [
   {
     name: "Shibano Toramaru 芝野虎丸",
     pic: new URL(
@@ -27,4 +27,4 @@ const authors: Author[] = [
   },
 ];
 
-export default authors;
+export default allAuthors;

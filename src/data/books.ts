@@ -5,7 +5,7 @@ import Topic from "@/models/topic";
 import { Level } from "@/models/level_range";
 import Publisher from "@/models/publishers";
 
-const books: Book[] = [
+const allBooks: Book[] = [
   {
     title: "Joseki Revolution",
     pic: new URL("https://gobooks.com/books/thumbs/sg0169_ki_k90_tn.jpg"),
@@ -97,4 +97,4 @@ const books: Book[] = [
   },
 ];
 
-export default books;
+export default allBooks;

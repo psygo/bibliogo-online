@@ -1,7 +1,7 @@
 import Country from "./country";
 import Language from "./language";
 
-import authors from "@/data/authors";
+import allAuthors from "@/data/authors";
 
 interface _Author {
   name: string;
@@ -18,4 +18,4 @@ export default Author;
  * Not case sensitive.
  */
 export const findAuthorByString = (name: string) =>
-  authors.find((a) => a.name.toLowerCase().includes(name.toLowerCase()));
+  allAuthors.find((a) => a.name.toLowerCase().includes(name.toLowerCase()));
