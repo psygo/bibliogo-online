@@ -7,7 +7,7 @@ import Publisher from "@/models/utils/publishers";
 
 const allBooks: Book[] = [
   {
-    title: "Joseki Revolution",
+    name: "Joseki Revolution",
     pic: new URL("https://gobooks.com/books/thumbs/sg0169_ki_k90_tn.jpg"),
     subtitle: "Overthrowing Conventional Wisdom",
     author: findAuthorByString("Shibano")!,
@@ -28,7 +28,7 @@ const allBooks: Book[] = [
     pages: 199,
   },
   {
-    title: "Fuseki Revolution",
+    name: "Fuseki Revolution",
     pic: new URL("https://gobooks.com/books/thumbs/sg0163_ki_k89_tn.jpg"),
     subtitle: "How AI Has Changed Go",
     author: findAuthorByString("Shibano")!,
@@ -49,7 +49,7 @@ const allBooks: Book[] = [
     pages: 192,
   },
   {
-    title: "Buddhist Philosophy and The Game of Go",
+    name: "Buddhist Philosophy and The Game of Go",
     pic: new URL("https://gobooks.com/books/thumbs/sg0170_ss_budd_tn.jpg"),
     author: findAuthorByString("Cobb")!,
     publishers: [Publisher.self_published, Publisher.gobooks],
@@ -65,7 +65,7 @@ const allBooks: Book[] = [
     pages: 86,
   },
   {
-    title: "Yang Yilun's Ingenious Life and Death Problems",
+    name: "Yang Yilun's Ingenious Life and Death Problems",
     pic: new URL("https://gobooks.com/books/thumbs/sg0167_yy_ild1_tn.jpg"),
     volume: "1",
     author: findAuthorByString("Yilun")!,
@@ -83,7 +83,7 @@ const allBooks: Book[] = [
     numberOfProblems: 110,
   },
   {
-    title: "Yang Yilun's Ingenious Life and Death Problems",
+    name: "Yang Yilun's Ingenious Life and Death Problems",
     pic: new URL("https://gobooks.com/books/thumbs/sg0168_yy_ild2_tn.jpg"),
     volume: "2",
     author: findAuthorByString("Yilun")!,

@@ -6,7 +6,7 @@ import { Stack, FormControl, TextField } from "@mui/material";
 
 import allBooks from "@/data/books";
 
-import BooksTable from "@/components/books_table";
+import BooksTable from "@/components/BooksTable";
 import Appbar from "@/components/Appbar";
 
 export default function Home() {
@@ -26,7 +26,7 @@ export default function Home() {
 
     const filteredBooks = allBooks.filter(
       (b) =>
-        b.title.toLowerCase().includes(search.toLowerCase()) ||
+        b.name.toLowerCase().includes(search.toLowerCase()) ||
         b?.subtitle?.toLowerCase().includes(search.toLowerCase()) ||
         b.author.name.toLowerCase().includes(search.toLowerCase())
     );

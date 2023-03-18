@@ -1,9 +1,8 @@
-interface _LevelRange {
+interface LevelRange {
   min: Level;
   ideal: Level;
   max?: Level;
 }
-type LevelRange = Readonly<_LevelRange>;
 export default LevelRange;
 
 export enum Level {

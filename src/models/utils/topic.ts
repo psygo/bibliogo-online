@@ -23,5 +23,4 @@ enum Topic {
   ai = "AI",
   introductory = "Introductory",
 }
-
 export default Topic;

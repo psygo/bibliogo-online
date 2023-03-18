@@ -1,7 +1,6 @@
-interface _Resource {
-  title: string;
+interface Resource {
+  name: string;
   subtitle?: string;
   externalLinks?: readonly URL[];
 }
-type Resource = Readonly<_Resource>;
 export default Resource;

@@ -5,10 +5,8 @@ import Publisher from "../utils/publishers";
 import Resource from "./resource";
 import Topic from "../utils/topic";
 
-interface _Book extends Resource {
-  title: string;
+interface Book extends Resource {
   pic?: URL;
-  subtitle?: string;
   volume?: string;
   publishers: Publisher[];
   author: Author;
@@ -16,9 +14,7 @@ interface _Book extends Resource {
   languages: readonly Language[];
   topics: readonly Topic[];
   levelRange?: LevelRange;
-  externalLinks?: readonly URL[];
   pages: number | "unknown";
   numberOfProblems?: number;
 }
-type Book = Readonly<_Book>;
 export default Book;

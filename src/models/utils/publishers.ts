@@ -9,5 +9,4 @@ enum Publisher {
   oromedia = "Oro Media",
   folio = "Folio",
 }
-
 export default Publisher;

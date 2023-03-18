@@ -8,5 +8,4 @@ enum Language {
   korean = "kr",
   portuguese = "pt",
 }
-
 export default Language;

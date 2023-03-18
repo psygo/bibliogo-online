@@ -1,9 +1,10 @@
+import Resource from "./resource";
 import Country from "../utils/country";
 import Language from "../utils/language";
 
 import allAuthors from "@/data/authors";
 
-interface _Author {
+interface Author extends Resource {
   name: string;
   pic?: URL;
   rank?: string;
@@ -11,7 +12,6 @@ interface _Author {
   countries: readonly Country[];
   spokenLanguages: readonly Language[];
 }
-type Author = Readonly<_Author>;
 export default Author;
 
 /**

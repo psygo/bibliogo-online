@@ -7,7 +7,7 @@ import Book from "@/models/resources/book";
 
 const booksTableColumns: GridColDef[] = [
   {
-    field: "title",
+    field: "name",
     headerName: "Title",
     width: 530,
     renderCell: (params) => (
