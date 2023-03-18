@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import { Typography } from "@mui/material";
+import { Typography, Stack } from "@mui/material";
 import { DataGrid, GridColDef } from "@mui/x-data-grid";
 
 import Book from "@/models/resources/book";
@@ -69,11 +69,15 @@ interface BooksTableProps {
 
 export default function BooksTable({ books }: BooksTableProps) {
   return (
-    <DataGrid
-      getRowId={(row) => row.title + row.pic}
-      rows={books}
-      columns={booksTableColumns}
-      rowHeight={50}
-    ></DataGrid>
+    <Stack spacing={1} sx={{ height: "100%" }}>
+      <Typography variant="h5">Books Table</Typography>
+
+      <DataGrid
+        getRowId={(row) => row.title + row.pic}
+        rows={books}
+        columns={booksTableColumns}
+        rowHeight={50}
+      ></DataGrid>
+    </Stack>
   );
 }

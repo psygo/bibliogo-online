@@ -2,11 +2,12 @@ import { useState, ChangeEvent } from "react";
 
 import Head from "next/head";
 
-import { FormControl, TextField, Typography } from "@mui/material";
+import { Stack, FormControl, TextField } from "@mui/material";
 
 import allBooks from "@/data/books";
 
 import BooksTable from "@/components/books_table";
+import Appbar from "@/components/Appbar";
 
 export default function Home() {
   const [books, setBooks] = useState(allBooks);
@@ -42,23 +43,20 @@ export default function Home() {
       </Head>
 
       <main style={{ height: "100vh" }}>
-        <Typography variant="h4">Bibliogo Online</Typography>
+        <Appbar />
 
-        <FormControl>
-          <TextField
-            label="Global Search"
-            value={search}
-            onChange={handleSearch}
-          ></TextField>
-        </FormControl>
+        <Stack sx={{ height: "100%", mt: 1 }}>
+          <FormControl>
+            <TextField
+              label="Global Search"
+              sx={{ width: "max-content" }}
+              value={search}
+              onChange={handleSearch}
+            ></TextField>
+          </FormControl>
 
-        <Typography variant="h5">Books Table</Typography>
-
-        <BooksTable books={books} />
-
-        {/* TODO: Authors Table */}
-        {/* TODO: Articles Table */}
-        {/* TODO: Resources Table */}
+          <BooksTable books={books} />
+        </Stack>
       </main>
     </>
   );
