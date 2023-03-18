@@ -45,7 +45,7 @@ export default function Home() {
       <main style={{ height: "100vh" }}>
         <Appbar />
 
-        <Stack sx={{ height: "100%", mt: 1 }}>
+        <Stack sx={{ height: "100%", mt: 2, p: 2 }} spacing={2}>
           <FormControl>
             <TextField
               label="Global Search"

@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import { AppBar, Toolbar } from "@mui/material";
+import { Stack, AppBar, Toolbar, Typography } from "@mui/material";
 
 export default function Appbar() {
   return (
@@ -9,8 +9,14 @@ export default function Appbar() {
       sx={{ backgroundColor: "transparent", color: "black" }}
     >
       <Toolbar>
-        <Link href="/">Bibliogo</Link>
-        <Link href="/about">About</Link>
+        <Stack direction="row" spacing={4}>
+          <Link href="/" className="appbar-link">
+            <Typography>Bibliogo</Typography>
+          </Link>
+          <Link href="/about" className="appbar-link">
+            <Typography>About</Typography>
+          </Link>
+        </Stack>
       </Toolbar>
     </AppBar>
   );
