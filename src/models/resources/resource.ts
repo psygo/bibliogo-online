@@ -7,11 +7,12 @@ import Tablable from "./tablable";
 
 interface Resource extends Tablable {
   authors?: readonly Author[];
+  description?: string;
   subtitle?: string;
   releaseDate?: Date;
   languages: readonly Language[];
   topics: readonly Topic[];
-  publishers: Publisher[];
+  publishers?: Publisher[];
   levelRange?: LevelRange;
 }
 export default Resource;
