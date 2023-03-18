@@ -27,8 +27,7 @@ export default function Home() {
     const filteredBooks = allBooks.filter(
       (b) =>
         b.name.toLowerCase().includes(search.toLowerCase()) ||
-        b?.subtitle?.toLowerCase().includes(search.toLowerCase()) ||
-        b.author.name.toLowerCase().includes(search.toLowerCase())
+        b?.subtitle?.toLowerCase().includes(search.toLowerCase())
     );
 
     setBooks(filteredBooks);

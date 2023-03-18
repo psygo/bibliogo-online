@@ -1,10 +1,10 @@
-import Resource from "./resource";
+import Tablable from "./tablable";
 import Country from "../utils/country";
 import Language from "../utils/language";
 
 import allAuthors from "@/data/authors";
 
-interface Author extends Resource {
+interface Author extends Tablable {
   name: string;
   pic?: URL;
   rank?: string;
