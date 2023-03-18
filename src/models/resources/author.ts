@@ -1,5 +1,5 @@
-import Country from "./country";
-import Language from "./language";
+import Country from "../utils/country";
+import Language from "../utils/language";
 
 import allAuthors from "@/data/authors";
 

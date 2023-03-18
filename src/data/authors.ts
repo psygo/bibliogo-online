@@ -1,6 +1,6 @@
-import Author from "@/models/author";
-import Country from "@/models/country";
-import Language from "@/models/language";
+import Author from "@/models/resources/author";
+import Country from "@/models/utils/country";
+import Language from "@/models/utils/language";
 
 const allAuthors: Author[] = [
   {

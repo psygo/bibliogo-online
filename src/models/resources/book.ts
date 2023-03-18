@@ -1,10 +1,11 @@
 import Author from "./author";
-import Language from "./language";
-import LevelRange from "./level_range";
-import Publisher from "./publishers";
-import Topic from "./topic";
+import Language from "../utils/language";
+import LevelRange from "../utils/level_range";
+import Publisher from "../utils/publishers";
+import Resource from "./resource";
+import Topic from "../utils/topic";
 
-interface _Book {
+interface _Book extends Resource {
   title: string;
   pic?: URL;
   subtitle?: string;
@@ -16,7 +17,7 @@ interface _Book {
   topics: readonly Topic[];
   levelRange?: LevelRange;
   externalLinks?: readonly URL[];
-  pages: number | 'unknown';
+  pages: number | "unknown";
   numberOfProblems?: number;
 }
 type Book = Readonly<_Book>;

@@ -1,9 +1,9 @@
-import { findAuthorByString } from "@/models/author";
-import Book from "@/models/book";
-import Language from "@/models/language";
-import Topic from "@/models/topic";
-import { Level } from "@/models/level_range";
-import Publisher from "@/models/publishers";
+import { findAuthorByString } from "@/models/resources/author";
+import Book from "@/models/resources/book";
+import Language from "@/models/utils/language";
+import Topic from "@/models/utils/topic";
+import { Level } from "@/models/utils/level_range";
+import Publisher from "@/models/utils/publishers";
 
 const allBooks: Book[] = [
   {
