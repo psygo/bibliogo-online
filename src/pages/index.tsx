@@ -85,15 +85,17 @@ export default function Home() {
 
     if (newSearch === "") {
       setBooks(allBooks);
-    } else {
-      const filteredBooks = allBooks.filter(
-        (b) =>
-          b.title.toLowerCase().includes(search.toLowerCase()) ||
-          b.author.name.toLowerCase().includes(search.toLowerCase())
-      );
-
-      setBooks(filteredBooks);
+      return;
     }
+
+    const filteredBooks = allBooks.filter(
+      (b) =>
+        b.title.toLowerCase().includes(search.toLowerCase()) ||
+        b?.subtitle?.toLowerCase().includes(search.toLowerCase()) ||
+        b.author.name.toLowerCase().includes(search.toLowerCase())
+    );
+
+    setBooks(filteredBooks);
   }
 
   return (
@@ -110,11 +112,13 @@ export default function Home() {
 
         <FormControl>
           <TextField
-            label="Search"
+            label="Global Search"
             value={search}
             onChange={handleSearch}
           ></TextField>
         </FormControl>
+
+        <Typography variant="h5">Books Table</Typography>
 
         <DataGrid
           getRowId={(row) => row.title + row.pic}
@@ -122,6 +126,10 @@ export default function Home() {
           columns={booksTableColumns}
           rowHeight={50}
         ></DataGrid>
+
+        {/* TODO: Authors Table */}
+        {/* TODO: Articles Table */}
+        {/* TODO: Resources Table */}
       </main>
     </>
   );
